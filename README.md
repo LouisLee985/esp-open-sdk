@@ -5,6 +5,7 @@ forked from
 ## Tested on Ubuntu22.04
 
 ```
+su ; \
  sudo apt update ; \
  sudo apt-get install -y make unrar-free autoconf automake libtool gcc g++ gperf \
       flex bison texinfo gawk ncurses-dev libexpat-dev python3-dev python3 python3-serial python-is-python3 \
