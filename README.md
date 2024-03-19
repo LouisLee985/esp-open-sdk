@@ -24,3 +24,4 @@ forked from
 
 <br>1.　https://github.com/maximkulkin/esp-homekit-demo/wiki/Build-instructions-ESP8266-(Docker)
 <br>2.　https://github.com/pfalcon/esp-open-sdk/pull/391
+<br>3.　https://tanjuntao.github.io/2020/05/23/Linux-%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%EF%BC%9Asu-%E5%92%8C-sudo/
