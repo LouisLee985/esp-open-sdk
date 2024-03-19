@@ -5,7 +5,7 @@ forked from
 ## Tested on Ubuntu22.04
 
 ```
-su - -c " \
+su -c " \
 apt update ; \
 apt-get install -y make unrar-free autoconf automake libtool gcc g++ gperf \
      flex bison texinfo gawk ncurses-dev libexpat-dev \
