@@ -61,6 +61,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt update && \
 COPY --from=builder /build/esp-open-sdk/xtensa-lx106-elf /opt/xtensa-lx106-elf
 ENV PATH /opt/xtensa-lx106-elf/bin:$PATH
 ```
-## Thanks
+---
 <br>1.　https://github.com/maximkulkin/esp-homekit-demo/wiki/Build-instructions-ESP8266-(Docker)
 <br>2.　https://github.com/pfalcon/esp-open-sdk/pull/391
