@@ -57,7 +57,7 @@ RUN su docker -c "cd /build/esp-open-sdk && make STANDALONE=n"
 FROM ubuntu:22.04
 
 RUN DEBIAN_FRONTEND=noninteractive apt update && \
-    DEBIAN_FRONTEND=noninteractive apt install -y make python3 python3-serial
+    DEBIAN_FRONTEND=noninteractive apt install -y make python3 python3-serial python-is-python3 git
 
 COPY --from=builder /build/esp-open-sdk/xtensa-lx106-elf /opt/xtensa-lx106-elf
 ENV PATH /opt/xtensa-lx106-elf/bin:$PATH
