@@ -7,7 +7,7 @@ forked from
 ```
  su -c " \
  apt update ; \
- apt-get install -y make unrar-free autoconf automake libtool gcc g++ gperf \
+ apt install -y make unrar-free autoconf automake libtool gcc g++ gperf \
       flex bison texinfo gawk ncurses-dev libexpat-dev \
       python3-dev python3 python3-serial python-is-python3 \
       sed git unzip bash help2man wget bzip2 libtool-bin "
@@ -31,7 +31,7 @@ RUN mkdir /build && chown docker:docker /build
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt-get install -y \
+RUN apt update && apt install -y \
     make unrar-free autoconf automake libtool gcc g++ gperf \
     flex bison texinfo gawk ncurses-dev libexpat-dev \
     python3-dev python3 python3-serial python-is-python3 \
