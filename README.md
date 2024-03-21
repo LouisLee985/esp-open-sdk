@@ -38,7 +38,6 @@ RUN apt update && apt install -y \
     python3-dev python3 python3-serial python-is-python3 \
     sed git unzip bash help2man wget bzip2 libtool-bin 
 
-
 # Checkout main source code
 RUN su docker -c " \
     git clone --recursive https://github.com/LouisLee985/esp-open-sdk.git /build/esp-open-sdk ; \
@@ -67,7 +66,6 @@ ENV PATH /opt/xtensa-lx106-elf/bin:$PATH
 docker build . -f esp-sdk-dockerfile -t esp-sdk
 ```
 ---
-
 
 <br>1.　https://github.com/maximkulkin/esp-homekit-demo/wiki/Build-instructions-ESP8266-(Docker)
 <br>2.　https://github.com/pfalcon/esp-open-sdk/pull/391
