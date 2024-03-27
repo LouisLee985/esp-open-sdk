@@ -4,4 +4,4 @@
  <br>
 Tested on Docker
  <br>
-[wiki](https://github.com/LouisLee985/esp-open-sdk/wiki)
+[How to build](https://github.com/LouisLee985/esp-open-sdk/wiki)
