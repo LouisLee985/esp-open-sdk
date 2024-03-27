@@ -1,4 +1,4 @@
-# esp-open-sdk
+## esp-open-sdk
 
  Tested on Docker and Ubuntu22.04
  <br>
