@@ -22,48 +22,8 @@ forked from
 ```
 
 ## Tested on Docker
-esp-sdk-dockerfile<br>
-
-```
-FROM ubuntu:22.04 as builder
-
-RUN groupadd -g 1000 docker && useradd docker -u 1000 -g 1000 -s /bin/bash -d /build
-RUN mkdir /build && chown docker:docker /build
-
-ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt update && apt install -y \
-    make unrar-free autoconf automake libtool gcc g++ gperf \
-    flex bison texinfo gawk ncurses-dev libexpat-dev \
-    python3-dev python3 python3-serial python-is-python3 \
-    sed git unzip bash help2man wget bzip2 libtool-bin 
-
-# Checkout main source code
-RUN su docker -c " \
-    git clone --recursive https://github.com/LouisLee985/esp-open-sdk.git /build/esp-open-sdk ; \
-"
-
-# Patch source code to make it work on newer Linux version
-RUN su docker -c " \
-    cd /build/esp-open-sdk ; \
-    cd esptool ; \
-    git checkout v1.3 ; \
-"
-
-# Build code
-RUN su docker -c "cd /build/esp-open-sdk && make STANDALONE=n"
-
-FROM ubuntu:22.04
-
-RUN DEBIAN_FRONTEND=noninteractive apt update && \
-    DEBIAN_FRONTEND=noninteractive apt install -y make python3 python3-serial python-is-python3 git
-
-COPY --from=builder /build/esp-open-sdk/xtensa-lx106-elf /opt/xtensa-lx106-elf
-ENV PATH /opt/xtensa-lx106-elf/bin:$PATH
-```
-
-```
-docker build . -f esp-sdk-dockerfile -t esp-sdk
+```shell
+docker run -it --name esp-open-sdk jslzlai/esp-sdk:0.1 /bin/bash
 ```
 ---
 <br>1.  https://github.com/LouisLee985/esp-open-sdk/wiki
